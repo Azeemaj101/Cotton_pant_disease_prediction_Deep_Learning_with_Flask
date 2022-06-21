@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS v5.2.0-beta1 -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+        <link rel="icon" href="/static/images/2.png" type="image/icon type">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <img src="/static/images/7.png" alt="" class="navbar-brand" srcset="" style="height: 60px; width: 50px;">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallary">Gallary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://github.com/Azeemaj101/Deep-Learning-Math-Concepts/blob/main/Cotton_Prediction/Cotton_Predictions.ipynb">NoteBook</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://github.com/Azeemaj101/Deep-Learning-Math-Concepts/tree/main/Cotton_Prediction/Cotton_Disease">DataSet</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="https://azeemaj101.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                    <button class="btn-web me-2 btn-sm">Portfolio</button>
+                </a>
+                <a href="https://github.com/Azeemaj101" target="_blank" rel="noopener noreferrer">
+                    <button class="btn-web btn-sm">Github</button>
+                </a>
+            </div>
+        </nav>
+        <section class="d-flex justify-content-center align-items-center flex-column">
+            <div class="text-light fw-bold fs-2 section-text">
+                <!-- Predict Cotton Crop Disease & Get Cure -->
+                COTTON PLANT DISEASE PREDICTION AI APP
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4 d-flex justify-content-center align-items-center text-light section-text">
+                        Many veterans said that Deep Learning and AI is a threat to our world, but if we use it properly, we can do many good things today, we will see a small example of this in which we will be in cotton farming Find out about the disease
+                    </div>
+                    <div class="col-4 d-flex justify-content-center align-items-center">
+                        <img src="/static/images/3.png" alt="" class="img-brain" srcset="" style="height: 400px; width: 850px;">
+                    </div>
+                    <div class="col-4 d-flex justify-content-center align-items-center text-light section-text">
+                        کئی تجربہ کاروں کا کہنا تھا کہ ڈیپ لرننگ اور اے آئی ہماری دنیا کے لیے خطرہ ہے، لیکن اگر ہم اس کا صحیح استعمال کریں تو آج ہم بہت سے اچھے کام کر سکتے ہیں، ہمیں اس کی ایک چھوٹی سی مثال نظر آئے گی جس میں ہم کپاس کی کاشت کے بارے میں جانیں گے۔ 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main>
+            <div class="fs-3 fw-bold text-light section-text text-center mt-2"> 
+                Predict Cotton Crop Disease & Get Cure
+            </div>
+            <div class="d-flex justify-content-center align-items-center py-5">
+                <div class="form-box px-5 py-4">
+                    <form action="/predict" method="post" class="text-center" enctype="multipart/form-data" onsubmit="showloading()">
+                        <input type="file" name="image" class="upload mb-3">
+                        <br>
+                        <input type="submit" class="btn-submit fs-5" value="Predict">
+                    </form>
+                </div>
+            </div>
+        </main>
+        <hr/>
+        <div class="fs-3 fw-bold text-center text-light section-text mb-3" id="gallary">
+            Gallary 
+        </div>
+        <div class="container d-flex justify-content-center align-items-center flex-wrap">
+            <img src="https://images.unsplash.com/photo-1519356162333-4d49ceade668?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="border border-light border-2 rounded-2 me-2 mb-2 img-size" style="height: 210px; width: 270px;">
+            <img src="https://images.unsplash.com/photo-1502395809857-fd80069897d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" class="border border-light border-2 rounded-2 me-2 mb-2 img-size" style="height: 210px; width: 270px;">
+            <img src="https://images.unsplash.com/photo-1633873972250-e69cd8b5e31c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" alt="" class="border border-light border-2 rounded-2 me-2 mb-2 img-size" style="height: 210px; width: 270px;">
+            <img src="https://images.unsplash.com/photo-1574202811504-59c492130827?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80" alt="" class="border border-light border-2 rounded-2 me-2 mb-2 img-size" style="height: 210px; width: 270px;">
+            <img src="https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" class="border border-light border-2 rounded-2 me-2 mb-2 img-size" style="height: 210px; width: 270px;">
+            <img src="https://images.unsplash.com/photo-1598616068517-c75ad397a436?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="" class="border border-light border-2 rounded-2 me-2 mb-2 img-size" style="height: 210px; width: 270px;">
+            <img src="https://images.unsplash.com/photo-1616504297622-a9819f1227e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="" class="border border-light border-2 rounded-2 me-2 mb-2 img-size" style="height: 210px; width: 270px;">
+            <img src="https://images.unsplash.com/photo-1633554587766-ffc8151e31c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="" class="border border-light border-2 rounded-2 me-2 mb-2 img-size" style="height: 210px; width: 270px;">
+        </div>
+        <footer class="text-center fs-5 fw-bold text-light d-flex justify-content-center align-items-center">
+            ©️Copyright-2022 &nbsp; 
+            <a href="mailto:azeemaj101@gmail.com">
+                <i class="bi bi-envelope text-light zoom"></i>
+            </a>
+            &nbsp; 
+            <a href="https://github.com/Azeemaj101">
+                <i class="bi bi-github text-light zoom"></i>
+            </a>
+            &nbsp; 
+            <a href="mailto:azeemaj101@gmail.com">
+                <i class="bi bi-person-workspace text-light zoom"></i>
+            </a>
+        </footer>
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    </body>
+</html>
